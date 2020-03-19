@@ -3,33 +3,35 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataImporter", "DataImporter", "{F92CBB56-FBC1-45C2-A28F-432EC8117291}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. DataImporter", "0. DataImporter", "{F92CBB56-FBC1-45C2-A28F-432EC8117291}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{8C642743-5163-427D-A0F4-6E2E1FA63A6D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Libraries", "1. Libraries", "{8C642743-5163-427D-A0F4-6E2E1FA63A6D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{97E46226-AA3D-49F8-9A2B-EA4AB8F613A5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Web", "2. Web", "{97E46226-AA3D-49F8-9A2B-EA4AB8F613A5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIs", "APIs", "{EB771CF2-F75E-4B9A-8510-9F96760F649D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Portal", "Portal", "{0A05D72E-60B6-4C28-87DD-E0426EE5A73B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colt.Infections.Web", "Colt.Infections.Web\Colt.Infections.Web.csproj", "{02EAAD10-0EF5-4D48-BEB0-9B7EE1813C12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Colt.Infections.Web", "Colt.Infections.Web\Colt.Infections.Web.csproj", "{02EAAD10-0EF5-4D48-BEB0-9B7EE1813C12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colt.Infections.Api", "Colt.Infections.Api\Colt.Infections.Api.csproj", "{D62F3784-FC14-42C2-80CB-6057D8D903E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Colt.Infections.Api", "Colt.Infections.Api\Colt.Infections.Api.csproj", "{D62F3784-FC14-42C2-80CB-6057D8D903E7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F7CBD818-8891-468F-9032-967D7650395F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Tests", "4. Tests", "{F7CBD818-8891-468F-9032-967D7650395F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colt.Infections.Tests", "Colt.Infections.Tests\Colt.Infections.Tests.csproj", "{291D5229-F735-433B-AF1D-556796D6D499}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Colt.Infections.Tests", "Colt.Infections.Tests\Colt.Infections.Tests.csproj", "{291D5229-F735-433B-AF1D-556796D6D499}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colt.Infections.Library", "Colt.Infections.Library\Colt.Infections.Library.csproj", "{EAB8CDE3-A37A-4D37-B4A2-627908494DC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Colt.Infections.Library", "Colt.Infections.Library\Colt.Infections.Library.csproj", "{EAB8CDE3-A37A-4D37-B4A2-627908494DC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colt.Infections", "Colt.Infections\Colt.Infections.csproj", "{C281DC99-9CCB-4703-B0FD-64AD4A27230B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Colt.Infections", "Colt.Infections\Colt.Infections.csproj", "{C281DC99-9CCB-4703-B0FD-64AD4A27230B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colt.Infections.Models", "Colt.Infections.Models\Colt.Infections.Models.csproj", "{0BC2A334-94F5-471B-87CD-C6787CAA4D07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Colt.Infections.Models", "Colt.Infections.Models\Colt.Infections.Models.csproj", "{0BC2A334-94F5-471B-87CD-C6787CAA4D07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colt.Infections.Importer", "Colt.Infections.Importer\Colt.Infections.Importer.csproj", "{2DBAB1F8-430B-4EB9-8252-8673119B4A23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Colt.Infections.Importer", "Colt.Infections.Importer\Colt.Infections.Importer.csproj", "{2DBAB1F8-430B-4EB9-8252-8673119B4A23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colt.Infections.Api.Infrastructure", "Colt.Infections.Api.Infrastructure\Colt.Infections.Api.Infrastructure.csproj", "{7219443D-C4A8-49CA-8952-426D71E29728}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Colt.Infections.Api.Infrastructure", "Colt.Infections.Api.Infrastructure\Colt.Infections.Api.Infrastructure.csproj", "{7219443D-C4A8-49CA-8952-426D71E29728}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Mobile", "3. Mobile", "{C8DEE3B4-9D68-47B2-B194-BA8A1F6598E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
