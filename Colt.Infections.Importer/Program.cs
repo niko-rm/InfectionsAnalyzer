@@ -5,6 +5,8 @@ using System.Reflection;
 using System.Linq;
 using Colt.Infections.Importer.Models;
 using System.Collections.Generic;
+using System.Net;
+using Newtonsoft.Json;
 
 namespace Colt.Infections.Importer
 {
@@ -24,69 +26,19 @@ namespace Colt.Infections.Importer
 
             var virusCode = args[0];
 
-            var csvFile = File.ReadAllLines(string.Join('\\', Program.currentAssemblyPath, downloadFolder, fileName));
-            var listFromUpload = new List<CsvCovidInfection>();
-
-            //Skipping first row: Titles 
-            //0: date,
-            //1: location,
-            //2: new_cases,
-            //3: new_deaths,
-            //4: total_cases,
-            //5: total_deaths
-
-            foreach (var row in csvFile.Skip(1))
+            using (WebClient wc = new WebClient())
             {
-                var eventDate = DateTime.MinValue;
-                var newDefault = 0;
-                var deathDefault = 0;
+                var url = "https://coronavirus.m.pipedream.net/";
+                var json = wc.DownloadString(url);
+                var dataInfection = JsonConvert.DeserializeObject<CovidInfectionItem>(json);
 
-                var fields = row.Split(',');
-                int.TryParse(fields[2], out newDefault);
-                int.TryParse(fields[3], out deathDefault);
-                DateTime.TryParse(fields[0], out eventDate);
+                UpdateData updateData = new UpdateData();
 
-                //ToDo: Check date for event date to filter (from last run to today)
+                updateData.Update(dataInfection.rawData, virusCode);
 
-                listFromUpload.Add(new CsvCovidInfection
-                {
-                    EventDate =eventDate,
-                    Location = fields[1],
-                    New = newDefault,
-                    Death = deathDefault
-                });
+
             }
 
-            using (var ctx = new InfectionDbContext())
-            {
-                //Check Virus Definition
-                var virusDefinition = ctx.VirusDefinition.Where(x => x.VirusCode == virusCode).FirstOrDefault();
-                if (virusDefinition == null)
-                {
-                    virusDefinition = new VirusDefinition()
-                    {
-                        VirusName = "Corona Virus",
-                        VirusCode = virusCode,
-                    };
-
-                    ctx.VirusDefinition.Add(virusDefinition);
-                }
-
-                //add the list on database
-                foreach (var item in listFromUpload)
-                {
-                    virusDefinition.EventCaseDefinition.Add(new EventCaseDefinition()
-                    {
-                        DateEvent = item.EventDate,
-                        Death = item.Death,
-                        Infected = item.New,
-                        Location = item.Location,
-                        UidCase = Guid.NewGuid(),
-                    });
-                }
-
-                ctx.SaveChanges();
-            }
         }
     }
 }
