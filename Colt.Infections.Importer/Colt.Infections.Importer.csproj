@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Colt.Infections.Library\Colt.Infections.Library.csproj" />
     <ProjectReference Include="..\Colt.Infections\Colt.Infections.csproj" />
   </ItemGroup>
